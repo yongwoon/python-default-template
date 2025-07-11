@@ -6,7 +6,7 @@
 
 ```bash
 # Web スクレイピング
-poetry add requests beautifulsoup4 lxml
+poetry add requests beautifulsoup4
 poetry add selenium webdriver-manager
 
 # Google API
