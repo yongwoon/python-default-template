@@ -1,0 +1,89 @@
+# Git関連
+.git
+.gitignore
+README.md
+.gitattributes
+
+# Python関連
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Poetry関連
+poetry.lock
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# IDE関連
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS関連
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# プロジェクト固有
+# データファイル
+data/
+logs/
+temp/
+tmp/
+
+# 認証情報（本番では別途マウント）
+credentials.json
+*.key
+*.pem
+
+# テスト関連
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ドキュメント
+docs/
+*.md
+!requirements.md
+
+# 開発用設定
+.env.local
+.env.development
+.env.test
+
+# Docker関連
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+.dockerignore
+
+# 不要なファイル
+*.bak
+*.tmp
+*.orig

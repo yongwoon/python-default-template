@@ -1,0 +1,28 @@
+[project]
+name = "automate-precedents-processing"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "yongwoon kim",email = "yongwoon.kim@legalontech.jp"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[tool.poetry]
+name = "automate-precedents-processing"
+version = "0.1.0"
+description = ""
+authors = ["yongwoon kim <yongwoon.kim@legalontech.jp>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

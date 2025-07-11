@@ -1,0 +1,44 @@
+services:
+  backend:
+    container_name: python_default_template_backend
+    environment:
+      # Other environment variables
+      - PYTHONUNBUFFERED=1
+      - CHROMEDRIVER_PATH=/usr/bin/chromedriver
+      - CHROME_BIN=/usr/bin/chromium
+      # Timezone Settings
+      - TZ=Asia/Tokyo
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./credentials:/app/credentials
+    env_file:
+      - ./.env
+    networks:
+      - python_default_template_network
+    # Healthcheck (only check if the container is running)
+    healthcheck:
+      test: ["CMD", "ps", "aux"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    # Resource Limit
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: "1.0"
+        reservations:
+          memory: 512M
+          cpus: "0.5"
+
+networks:
+  python_default_template_network:
