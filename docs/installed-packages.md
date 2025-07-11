@@ -13,7 +13,7 @@ poetry add selenium webdriver-manager
 poetry add gspread google-auth
 
 # データ処理
-poetry add pandas gspread-pandas
+poetry add pandas
 ```
 
 ### PDF・Word 操作
