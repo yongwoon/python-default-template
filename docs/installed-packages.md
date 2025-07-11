@@ -31,22 +31,30 @@ poetry add pypandoc python-dotenv
 ### LLM 連携
 
 ```bash
-# いずれか選択
-poetry add openai anthropic google-generativeai
-
-# 核心ライブラリ
+# 核心ライブラリ（必須）
 poetry add langchain langchain-core langchain-community
 
-# LLM プロバイダー別（必要なもののみ選択）
-poetry add langchain-openai
-poetry add langchain-anthropic
+# OpenAI を使用する場合
+poetry add langchain-openai openai
+
+# Anthropic を使用する場合
+poetry add langchain-anthropic anthropic
+
+# Google Generative AI を使用する場合（オプション2: LangChain経由）
+# 注意: この場合は google-generativeai をインストールしないでください
 poetry add langchain-google-genai
+
+# 複数プロバイダーを使用する場合（Google以外）
+poetry add langchain-openai langchain-anthropic openai anthropic
 ```
 
 ### 開発用依存関係
 
 ```bash
-poetry add --group dev pytest black flake8 mypy
+poetry add --group dev black flake8
+
+# postpone
+poetry add --group dev pytest mypy
 ```
 
 ## 仮想環境の管理
